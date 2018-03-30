@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="GettingData.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GettingData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ComboBox x:Name="muse_list_combobox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="416"/>
+        <Button x:Name="refresh_button" Content="Refresh" HorizontalAlignment="Left" Margin="11,47,0,0" VerticalAlignment="Top" Click="refresh_button_clicked"/>
+        <Button x:Name="connect_button" Content="Connect" HorizontalAlignment="Left" Margin="101,47,0,0" VerticalAlignment="Top" Click="connect_button_clicked"/>
+        <Button x:Name="disconnect_button" Content="Disconnect" HorizontalAlignment="Left" Margin="195,46,0,0" VerticalAlignment="Top" Click="disconnect_button_clicked"/>
+        <TextBlock x:Name="connection_status_label" HorizontalAlignment="Left" Margin="12,87,0,0" TextWrapping="Wrap" Text="Connection Status:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="connection_status" HorizontalAlignment="Left" Margin="151,89,0,0" TextWrapping="Wrap" Text="Unknown" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-16,391,0,0" VerticalAlignment="Top" Width="467">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="line_1_label" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Data 1" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock x:Name="line_1_data" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1"/>
+            <TextBlock x:Name="line_2_label" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Data 2" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock x:Name="line_2_data" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock x:Name="line_3_label" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Data 3" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0"/>
+            <TextBlock x:Name="line_3_data" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock x:Name="line_4_label" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Data 4" VerticalAlignment="Top" Grid.Row="3" Grid.Column="0"/>
+            <TextBlock x:Name="line_4_data" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+        <TextBlock x:Name="version_label" HorizontalAlignment="Left" Margin="7,0,0,9" TextWrapping="Wrap" Text="Version:" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="version" HorizontalAlignment="Left" Margin="26,0,0,9" TextWrapping="Wrap" Text="Unknown" VerticalAlignment="Bottom" Grid.Column="1"/>
+
+        <Button x:Name="file_create" Content="create file" HorizontalAlignment="Left" Margin="11,287,0,0" VerticalAlignment="Top" Click="file_create_Click"/>
+        <TextBox x:Name="foldername" HorizontalAlignment="Left" Margin="123,287,0,0" TextWrapping="Wrap" Text="input youre name" VerticalAlignment="Top" Height="62" Width="369" RenderTransformOrigin="0.501,0.5" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="record_fist" Content="fist" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Click="record_fist_Click" />
+        <Button x:Name="record_ok" Content="ok" HorizontalAlignment="Left" Margin="139,136,0,0" VerticalAlignment="Top" Click="record_ok_Click" />
+        <Button x:Name="record_ship" Content="pinch grip" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Click="record_ship_Click" />
+        <Button x:Name="record_cilindr" Content="cylindrical" HorizontalAlignment="Left" Margin="140,172,0,0" VerticalAlignment="Top" Click="record_cilindr_Click" />
+        <Button x:Name="record_big" Content="thumb" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Click="record_big_Click" />
+        <Button x:Name="record_point" Content="point" HorizontalAlignment="Left" Margin="140,208,0,0" VerticalAlignment="Top" Click="record_point_Click" />
+        <Button x:Name="record_rotation" Content="rotation" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Click="record_rotation_Click"/>
+        <Button x:Name="record_v" Content="v" HorizontalAlignment="Left" Margin="140,244,0,0" VerticalAlignment="Top" Click="record_v_Click" />
+        <Button x:Name="InputName" Content="input name" HorizontalAlignment="Left" Margin="11,324,0,0" VerticalAlignment="Top" Click="InputName_Click" />
+        <Button x:Name="pause_button" Content="Pause/Resume" HorizontalAlignment="Left" Margin="306,47,0,0" VerticalAlignment="Top" Click="pause_resume_clicked"/>
+        <TextBlock x:Name="command_text" HorizontalAlignment="Left" Margin="356,139,0,0" Text="choose a gesture" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+
+    </Grid>
+</Page>
